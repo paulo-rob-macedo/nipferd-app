@@ -121,9 +121,9 @@ export default {
 
   },
   mounted() {
-    this.usuario.id=this.$route.params.id;
+    this.cliente.id=this.$route.params.id;
     this.modo='Novo';
-    if (this.usuario.id>0){
+    if (this.cliente.id>0){
       this.modo='Edita';
     }
   }

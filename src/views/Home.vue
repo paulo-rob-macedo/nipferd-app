@@ -1,36 +1,34 @@
 <template>
   <div>
-    <MenuBar></MenuBar>
+    <Menu-bar></Menu-bar>
   </div>
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
+import { mapGetters } from "vuex";
 
-import {UsuarioLogin} from '@/models/UsuarioLogin.js';
+import { UsuarioLogin } from "@/models/UsuarioLogin.js";
 
 // @ is an alias to /src
 //import HelloWorld from '@/components/HelloWorld.vue'
-import MenuBar from '@/components/MenuBar.vue'
+import MenuBar from "@/components/MenuBar.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     MenuBar
   },
   data: () => ({
-    usuarioLogin:new UsuarioLogin()
+    usuarioLogin: new UsuarioLogin()
   }),
-  computed:{
-    ...mapGetters([
-      'getLogado'
-    ])
+  computed: {
+    ...mapGetters(["getLogado"])
   },
   mounted() {
-    this.usuarioLogin=this.getLogado;
-    if (this.usuarioLogin.id==0) {
-      this.$router.push('/login').catch(()=>{});
+    this.usuarioLogin = this.getLogado;
+    if (this.usuarioLogin.id == 0) {
+      this.$router.push("/login").catch(() => {});
     }
   }
-}
+};
 </script>

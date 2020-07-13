@@ -18,7 +18,7 @@
               label="Codigo"
               prepend-icon="mdi-id-card"
               :disabled="true"
-              v-show="usuario.id>0">
+              v-show="prod.id>0">
             </v-text-field>
           </v-col>
         </v-row>
@@ -141,9 +141,9 @@ export default {
     }
   },
   mounted() {
-    this.usuario.id=this.$route.params.id;
+    this.prod.id=this.$route.params.id;
     this.modo='Novo';
-    if (this.usuario.id>0){
+    if (this.prod.id>0){
       this.modo='Edita';
     }
   }

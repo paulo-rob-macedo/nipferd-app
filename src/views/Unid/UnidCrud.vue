@@ -85,9 +85,9 @@ export default {
     }
   },
   mounted() {
-    this.usuario.id=this.$route.params.id;
+    this.unid.id=this.$route.params.id;
     this.modo='Novo';
-    if (this.usuario.id>0){
+    if (this.unid.id>0){
       this.modo='Edita';
     }
   }
