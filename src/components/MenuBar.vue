@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-toolbar prominent extended>
-      <v-app-bar dense dark rounded fixed :clipped-left="true" app>
+    <v-toolbar prominent extended v-app>
+      <v-app-bar dense dark rounded  :clipped-left="true" app>
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <v-toolbar-title>Nilperd App</v-toolbar-title>
         <v-spacer></v-spacer>
@@ -23,7 +23,7 @@
           <router-view></router-view>
         </v-container>
       </v-main>
-      <v-navigation-drawer permanent dark v-model="drawer" :clipped="clipped" app>
+      <v-navigation-drawer permanent dark v-model="drawer" :clipped="true" app>
         <v-list dense>
           <template>
             <div v-for="(link, i) in links" :key="i">
@@ -78,7 +78,6 @@ export default {
   name: "MenuBar",
   data: () => ({
     drawer: false,
-    clipped: true,
     usuarioLogin: new UsuarioLogin(),
     lista: 1,
     links: [

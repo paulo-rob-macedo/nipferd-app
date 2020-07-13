@@ -8,6 +8,9 @@
           <v-btn icon>
             <v-icon large>mdi-card-search</v-icon>
           </v-btn>
+          <v-btn icon to="/">git 
+            <v-icon large>mdi-menu</v-icon>
+          </v-btn>
         </v-toolbar>
       </v-card-title>
       <v-card-text>
