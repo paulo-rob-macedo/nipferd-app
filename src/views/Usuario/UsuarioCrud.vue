@@ -8,7 +8,8 @@
           <v-btn icon>
             <v-icon large>mdi-card-search</v-icon>
           </v-btn>
-          <v-btn icon to="/">git 
+          <User-perfil></User-perfil>
+          <v-btn icon to="/">
             <v-icon large>mdi-menu</v-icon>
           </v-btn>
         </v-toolbar>
@@ -98,9 +99,13 @@
 
 <script>
 import { UsuarioModel } from "@/models/UsuarioModel.js";
+import UserPerfil from "@/components/UserPerfil";
 
 export default {
   name: "UsuarioCrud",
+  components: {
+    UserPerfil
+  },
   data: () => ({
     valid: true,
     modo: "",
